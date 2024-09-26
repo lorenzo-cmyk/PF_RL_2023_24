@@ -1,0 +1,29 @@
+--- Componente: MUX_MEMORY ---
+
+--- Librerie ---
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+--- Definizione della entità ---
+ENTITY MUX_MEMORY IS
+	PORT
+	(
+		INPUT_0 : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		INPUT_1 : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		SEL     : IN  STD_LOGIC;
+		OUTPUT  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END MUX_MEMORY;
+
+--- Architettura (behavioural) del componente ---
+ARCHITECTURE MUX_MEMORY_ARCH OF MUX_MEMORY IS
+BEGIN
+	PROCESS (SEL, INPUT_0, INPUT_1)
+	BEGIN
+		IF SEL = '0' THEN
+			OUTPUT <= INPUT_0;
+		ELSE
+			OUTPUT <= INPUT_1;
+		END IF;
+	END PROCESS;
+END MUX_MEMORY_ARCH;

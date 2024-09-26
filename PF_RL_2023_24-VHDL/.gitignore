@@ -1,0 +1,13 @@
+# [home]
+*.jou
+*.log
+*.str
+*.dcp
+
+# [dir]
+.Xil
+/PF_RL_2023_24.cache
+/PF_RL_2023_24.hw
+/PF_RL_2023_24.ip_user_files
+/PF_RL_2023_24.runs
+/PF_RL_2023_24.sim

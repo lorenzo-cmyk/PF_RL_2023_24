@@ -1,0 +1,1 @@
+create_clock -period 20 -name ClockConstraint -waveform {0 10} [get_ports i_clk]
